@@ -1,9 +1,6 @@
 import React from "react";
 
-const TodoItem1 = () => {
-  let todoName = "Buy Milk";
-  let todoDate = "4/10/2023";
-
+const TodoItem = ({ todoName, todoDate }) => {
   return (
     <div>
       <div className="container">
@@ -21,4 +18,4 @@ const TodoItem1 = () => {
   );
 };
 
-export default TodoItem1;
+export default TodoItem;
