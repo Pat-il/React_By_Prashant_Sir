@@ -1,6 +1,6 @@
 import React from "react";
 
-const ButtonsContainer = () => {
+const ButtonsContainer = ({ onButtonClicked }) => {
   let buttons = [
     "C",
     "1",
@@ -25,7 +25,11 @@ const ButtonsContainer = () => {
     <div className="buttons-container">
       {buttons.map((button, index) => {
         return (
-          <button key={index} className="button">
+          <button
+            key={index}
+            className="button"
+            onClick={() => onButtonClicked(button)}
+          >
             {button}
           </button>
         );
