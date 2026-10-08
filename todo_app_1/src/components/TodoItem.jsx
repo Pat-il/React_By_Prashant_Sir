@@ -1,6 +1,11 @@
 import React from "react";
 
-const TodoItem = ({ todoName, todoDate }) => {
+const TodoItem = ({ todoName, todoDate, onDeleteItem }) => {
+  let handleDeleteItem = (todoName) => {
+    // console.log("Deleting Todo: ", todoName);
+    onDeleteItem(todoName);
+  };
+
   return (
     <div>
       <div className="container">
@@ -8,7 +13,11 @@ const TodoItem = ({ todoName, todoDate }) => {
           <div className="col-6">{todoName}</div>
           <div className="col-4">{todoDate}</div>
           <div className="col-2">
-            <button type="button" className="btn btn-danger  kg-button">
+            <button
+              type="button"
+              onClick={() => handleDeleteItem(todoName)}
+              className="btn btn-danger  kg-button"
+            >
               delete
             </button>
           </div>
