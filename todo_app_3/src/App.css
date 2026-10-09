@@ -1,0 +1,30 @@
+input {
+  width: 100%;
+}
+
+.heading {
+  margin: 10px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 45px;
+}
+
+.items-container {
+  text-align: left;
+}
+
+.kg-row {
+  margin: 10px 5px;
+}
+
+.kg-button {
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.welmsg {
+  text-align: center;
+  margin-top: 20px;
+}
